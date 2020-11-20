@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DV_CW2_1920253</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="cw2.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="tm-site-header tm-mb-1">
+            <div class="tm-site-name-container tm-bg-color-1">
+                <h1 class="tm-text-white">Traffic Congestion in New York City</h1>
+            </div>
+            <div class="tm-nav-container tm-bg-color-8">
+                <nav class="tm-nav" id="tm-nav">
+                    <ul>
+                        <li class="tm-nav-item current">
+                            <a href="#intro" class="tm-nav-link">
+                                <span class="tm-mb-1">01</span>
+                                <span>Introduction</span>
+                            </a>
+                        </li>
+                        <li class="tm-nav-item">
+                            <a href="#questions" class="tm-nav-link">
+                                <span class="tm-mb-1">02</span>
+                                <span>Questions</span>
+                            </a>
+                        </li>
+                        <li class="tm-nav-item">
+                            <a href="#myviz" class="tm-nav-link">
+                                <span class="tm-mb-1">03</span>
+                                <span>Visualization</span>
+                            </a>
+                        </li>
+                        <li class="tm-nav-item">
+                            <a href="#result" class="tm-nav-link">
+                                <span class="tm-mb-1">04</span>
+                                <span >Result</span>
+                            </a>
+                        </li>
+                        <li class="tm-nav-item">
+                            <a href="#discussion" class="tm-nav-link">
+                                <span class="tm-mb-1">05</span>
+                                <span>Discussion</span>
+                            </a>
+                        </li>
+                        <li class="tm-nav-item">
+                            <a href="#conclusion" class="tm-nav-link">
+                                <span class="tm-mb-1">06</span>
+                                <span>Conclusion</span>
+                            </a>
+                        </li>
+                        <li class="tm-nav-item">
+                            <a href="#literature" class="tm-nav-link">
+                                <span class="tm-mb-1">07</span>
+                                <span>Resources</span>
+                            </a>
+                        </li>
+                        <li class="tm-nav-item">
+                            <a href="#about" class="tm-nav-link">
+                                <span class="tm-mb-1">08</span>
+                                <span>About</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <section class="tm-mb-2" id="intro">
+            <div class="tm-row tm-about-row">
+                <div class="tm-section-1-l">
+                    <img src="img_intro.jpg" alt="About image" class="tm-img-responsive">
+                </div>
+                <article class="tm-section-1-r tm-bg-color-8">
+                    <h2 class="tm-mb-2 tm-title-color">01 Introduction</h2>
+                    <p>Traffic problem is always a critical problem for well-developed countries and New York City has no exception.
+                        It is really important to find out how to solve this problem since it has big impact on citizens, cities, countries or even the global environment.</p>
+                    <p>In fact, there are several aspects to determine traffic congestion. Weather can be one aspect. Take rainy day as an example, it may slow down the speed of cars on the road, and
+                        affect traffic safety. Another aspect can be the incidents happened on the road such as traffic incident or road construction. Last but not least, traffic volume is the most
+                        intuitive aspect, since it identifies the flow time periods in particular time on specific road. Within these three aspects, the data of traffic volume counts is much large.
+                        Therefore, this website will choose the last aspect (traffic volume counts) to find out the places commonly have traffic jam.</p>
+                </article>
+            </div>
+        </section>
+        <section class="tm-mb-1 tm-row tm-services-row" id="questions">
+            <div class="tm-section-2-l">
+                <article class="tm-bg-color-6 tm-box-pad tm-mb-1">
+                    <h2 class="tm-mb-2">02 Research Questions</h2>
+                    <p>In order to find out which place is more commonly to have traffic jam, the three following questions are my research questions.
+                        By the dataset I use, it can compare the traffic volumes in each road in different road types and represents the road which has maximum traffic.
+                        Also, compare the road hourly and daily to show when is the peak hour in a day and the difference between weekday and weekend.</p>
+                </article>
+                <div class="tm-bg-color-7 tm-em-box">
+                    <ul class="tm-text-color-2">  <! 無順序性清單(Unordered lists)>
+                        <li>Which road type has the maximum traffic?</li>  <!每個項目放在li裡面>
+                        <li>Which road had the maximum traffic?</li>
+                        <li>When is the peak hour?</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tm-section-2-r">
+                <img src="img_question.jpg" alt="Services image" class="tm-img-responsive2">
+            </div>
+        </section>
+        <section class="tm-mb-2" id="myviz">
+            <div class="tm-row tm-about-row">
+                <article class="tm-section-3-r tm-bg-color-8">
+                    <h2 class="tm-mb-2 tm-title-color">03 Interactive Visualization</h2>
+                    <div class="tm-section-3-r tm-bg-color-6">
+                        <div class="tm-bg-color-7 tm-em-box-1">
+                            <p class="tm-text-color-2">This bar chart shows <strong>the total traffic volume with different road types.</strong>
+                                <br>As you can see, Avenue has the most traffic volume, account for 23,022,888 cars in 2017.
+                                Street is a little bit more than Expressway, which have 8,087,424 cars and 7,121,252 cars respectively.
+                                <br>While Highway has the lowest traffic volume with only 0.8% of Avenue.
+                                Circle is the second lowest one, which has 257,040 cars.</p>
+                        </div>
+                        <div id="mydataviz1" class="tm-bg-color-8 tm-em-box"></div>
+                    </div>
+                    <div class="tm-section-3-r tm-bg-color-6">
+                        <div class="tm-bg-color-7 tm-em-box-1">
+                            <p class="tm-text-color-2">This bar chart shows <strong>the total traffic volume about different roads.</strong>
+                                <br>There is a button above the chart, which is to choose the road type. After choosing the road type, the bar chart will
+                                change on its own to the one you chose. It will show the total traffic volume for each roads in that specific road type.
+                                <br>This bar chart represents that 12 Avenue, Main Street, Northern Boulevard, Boston Road, Belt Parkway, Cross Bronx Expressway
+                                and JJ Bryne Memorial Bridge have the most traffic. For the road type 'Circle' and 'Highway', both of them have only one road.
+                            </p>
+                        </div>
+                        <div id="mydataviz3" class="tm-bg-color-8 tm-em-box">
+                            <select id="selectButton"></select>
+                        </div>
+                    </div>
+                    <div class="tm-section-3-r tm-bg-color-6">
+                        <div class="tm-bg-color-7 tm-em-box-1">
+                            <p class="tm-text-color-2">This line chart shows <strong>the traffic volume for each road in a day.</strong>
+                                <br>With the buttons below, choose the road type first and then road name, the chart will show the line of that
+                            specific road you chose. At the same time, the chart represents the traffic volume hourly, so you can understand when is the
+                            peak hour or off-peak time.
+                            <br>For the original setting below, the peak hour of 3 Avenue is in 6pm, while the off-peak time is around 3am to 4am.</p>
+                        </div>
+                        <div id="buttons"></div>
+                        <div id="mydataviz2" class="tm-bg-color-8 tm-em-box">
+                            <div id="hourlyChart">
+                                <script src="cw.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="tm-mb-2" id="result">
+            <div class="tm-row tm-about-row">
+                <article class="tm-section-3-r tm-bg-color-8">
+                    <h2 class="tm-mb-2 tm-title-color">04 Main Result of this project</h2>
+                    <div class="tm-bg-color-7 sol-box1">
+                        <div class="tm-bg-color-8 sol-box1-q"><p class="tm-text-color-2"><strong>Question 1<br>Which road type has the maximum traffic?</strong></p></div>
+                        <p class="tm-text-color-2">In the first chart, it is obviously that <strong>Avenue has the max load of traffic.</strong>The reason for it might because it is the main road for
+                        citizens and there have many Avenues in New York City. Since the situation of data collection is quite complete, therefore, Avenue has
+                        the maximum traffic among other road types.</p>
+                    </div>
+                    <div class="tm-bg-color-7 sol-box2">
+                        <div class="tm-bg-color-8 sol-box2-q"><p class="tm-text-color-2"><strong>Question 2<br>Which road has the maximum traffic?</strong></p></div>
+                        <p class="tm-text-color-2">In the second bar chart, data are grouped by road type and represents with each road names. While changing the road type, you will see the scale
+                        changed accordingly, and it shows that Cross Bronx Expressway got the highest traffic volume, account for 3,880,416 cars half a year. Other
+                        roads and road types are way more lower traffic.</p>
+                    </div>
+                    <div class="tm-bg-color-7 sol-box3">
+                        <div class="tm-bg-color-8 sol-box3-q"><p class="tm-text-color-2"><strong>Question 3<br>When is the peak hour?</strong><br></p></div>
+                        <p class="tm-text-color-2">In the third chart, You can first choose the road type then road names to look for the connected scatter plot of traffic volume for a specific
+                        road in a day. Most roads got similar curve. The rush hour locates in 8-9 am and 5-7 pm, which is exactly correct in reality. Off-peak time is
+                        in 2-4 am when most people are sleeping.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="tm-mb-2" id="discussion">
+            <div class="tm-row tm-about-row">
+                <article class="tm-section-3-r tm-bg-color-8">
+                    <h2 class="tm-mb-2 tm-title-color">05 Discussion</h2>
+                    <div class="tm-bg-color-7 tm-em-box-1">
+                        <p class="tm-text-color-2"><strong>Interesting Finding</strong><br>Focus on the third chart, it can show not only how much the traffic volume
+                            are in each road, but also the distribution of traffic per hour. Take Cross Bronx Expressway as an example. Interestingly, this
+                            expressway has really busy traffic at most time. It kept having over 180,000 cars on the expressway from 8am to 8pm for about half a
+                            year. Peak hour on this expressway is really long, which means that it must be a main artery in New York City. After verifying with
+                            Google map, Cross Bronx Expressway connect with two districts in New York, which is The Bronx and Queens.</p>
+                        <p class="tm-text-color-2"><strong>Strengths</strong><br>All charts on my website are continuous. In the first chart, we first find out that
+                            Avenue is the source of traffic. The next chart can show which road in Avenue has maximum traffic. (It can show also other traffic volume
+                            for other road type) In the third chart, it shows the time flow of a specific road. All these can help figure out which road has heavy
+                            traffic.</p>
+                        <p class="tm-text-color-2"><strong>Limitation</strong><br>The main limitation of my approach is data is not complete enough, since the
+                            dataset only collect 5 discontinuous months in 2017, and even have different road for each month. Thus, it is hard to analysis
+                            this question accurately.<br>Besides, all charts in my project show the total traffic volume which is quite broad, so it is hard
+                            to find out the counts for a road or road type daily.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="tm-mb-2" id="conclusion">
+            <div class="tm-row tm-about-row">
+                <article class="tm-section-4-r tm-bg-color-8">
+                    <h2 class="tm-mb-2 tm-title-color">06 Conclusion</h2>
+                    <div class="tm-bg-color-7 tm-em-box-1">
+                        <p class="tm-text-color-2">In order to ease the traffic pressure, adopting a congesting pricing is a
+                            low-cost solution since it encourages people to change their travel time from peak hours to other time. Therefore, we can try adopt
+                            this method on the road that has maximum traffic.</p>
+                        <p class="tm-text-color-2"><strong>Reflection</strong><br>Since the charts on my website needs to choose the road on our own to know the
+                        situation of that specific road, and this causes lots of time to find out which road have maximum traffic. Thus, I would rather improve
+                        it as an automatic chart, which can show the order of the traffic volume for each road and road type.</p>
+                    </div>
+                </article>
+            </div>
+            <section class="tm-mb-2" id="literature">
+                <div class="tm-row tm-about-row">
+                    <article class="tm-section-6-r tm-bg-color-8">
+                        <h2 class="tm-mb-2 tm-title-color">07 Literature Resource</h2>
+                        <div class="tm-bg-color-7 tm-em-box-6">
+                            <p class="tm-text-color-2"><strong>Citation</strong>
+                            <ul>
+                                <li>O'Toole, Randal. "Solving the Problem of traffic Congestion." National Center for Policy Analysis. National Center for Policy
+                                    Analysis 8 (2012).</li><br>
+                                <li>Bruce Schaller, “New York City’s congestion pricing experience and implications for road pricing acceptance in the United States.”
+                                    Transport Policy, Volume 17, Issue 4, (2010).</li><br>
+                                <li>W. Wen, “A dynamic and automatic traffic light control expert system for solving the road congestion problem.” Expert Systems with
+                                    Applications, Volume 34, Issue 4, (2008).</li><br>
+                                <li>Y. Wang, F. Han, L. Zhu, O. Deussen and B. Chen, "Line Graph or Scatter Plot? Automatic Selection of Methods for Visualizing Trends
+                                    in Time Series," in IEEE Transactions on Visualization and Computer Graphics, vol. 24, no. 2, pp. 1141-1154, 1 Feb. 2018.</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+        <section class="tm-mb-2" id="about">
+            <div class="tm-row tm-about-row">
+                <article class="tm-section-4-r tm-bg-color-8">
+                    <h2 class="tm-mb-2 tm-title-color">08 About Me</h2>
+                    <p class="tm-text-color-2">MSc Data Science<br>Name: Hsin-Ju, Chan<br>ID Number: 1920253</p>
+                </article>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
