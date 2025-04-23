@@ -1,0 +1,12 @@
+{
+  "name": "nyc-traffic-analysis",
+  "version": "1.0.0",
+  "description": "Traffic congestion analysis for New York City",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
